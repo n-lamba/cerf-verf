@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+   <script>
+      function saveData() {
+   var name = document.getElementById("name").value;
+			localStorage.setItem("userName", name);
+        var role = document.getElementById("role").value;
+			localStorage.setItem("userRole", role);
+         var start = document.getElementById("sdate").value;
+			localStorage.setItem("startDate", start);
+         var end = document.getElementById("edate").value;
+			localStorage.setItem("endDate", end);
+         var organiser = document.getElementById("org").value;
+        localStorage.setItem("orgN", organiser);
+  }
+   </script>
+</head>
+
+<body id="fm">
+     <nav id="bar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="form.html">Form</a></li>
+    <li><a href="get certificate.html">Get Certificate</a></li>
+    <li><a href="qr code.html">QR code</a></li>
+    <img id="ig" src="logo.png">
+  </ul>
+</nav>
+ <form id="form1">
+   <label for="image" class="form">Profile Photo:</label>
+    <input type="file" id="image" name="image"><br> 
+ <label for="name" class="form">Enter your name:</label><br>
+		<input type="text" id="name" name="name"><br><br>
+  <label for="certificate no" class="form">Certificate No.:</label><br>
+  <input type="text" id="certificate no" name="name"><br>
+  <label for="role" class="form">Enter your role:</label><br>
+		<input type="text" id="role" name="role"><br><br>
+  <label for="org" class="form">Organisation:</label><br>
+		<input type="text" id="org" name="org"><br><br>
+   <label for="internship organizer" class="form">Internship Organizer:</label><br>
+    <input type="text" id="organisation" name="organisation"><br>
+   <label for="start date" class="form">Start Date:</label><br>
+   <input type="date" id="sdate" name="start date"><br>
+    <label for="end date" class="form">End Date:</label><br>
+   <input type="date" id="edate" name="end date"><br>
+  <button id="sub" type="submit" onclick="saveData()">Submit</button>
+</form>
+   <script src="script.js"></script>
+</body>
+  
+</html>

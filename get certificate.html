@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.1/jspdf.umd.min.js"></script>
+  <script>
+      window.onload = function(){
+         var name = localStorage.getItem("userName");
+		document.getElementById("userName").innerHTML = name;
+       var role = localStorage.getItem("userRole");
+		document.getElementById("userRole").innerHTML = role;
+         var start = localStorage.getItem("startDate");
+		document.getElementById("startDate").innerHTML = start;
+         var end = localStorage.getItem("endDate");
+		document.getElementById("endDate").innerHTML = end;
+         var org = localStorage.getItem("orgN");
+		document.getElementById("orgi").innerHTML = org;
+      }
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body id="fm">
+    <nav id="bar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="form.html">Form</a></li>
+    <li><a href="get certificate.html">Get Certificate</a></li>
+    <li><a href="qr code.html">QR code</a></li>
+    <img id="ig" src="logo.png">
+  </ul>
+</nav>
+  <div id="editor"></div>
+<!-- <h1 id="tap">Here we will add certificate </h1> </h1>
+<p id="tap"> It will have also the option to download the certificate.</p>  -->
+<button id="download-button" onclick = 'window.print()'>Download PDF</button>
+ <div id="cerf">
+   <div id="fo">
+ <table>
+  <tr>
+    <td class="left-column">Certificate of <strong>Internship</strong>  </td>
+    <td class="right-column"><img id="sr" src="kartexa.png"></td>
+  </tr>
+ </table>
+   <hr id="fr">
+  <div> <img id="me" src="ui.JPG"></div>
+    <div id="u">
+        <h2>This Certificate is presented to </h2>
+         <p style="margin-left: 150px;"> <span id="userName"></span></p>
+        <p>For completing the Internhip as Role of <span id="userRole"></span>  </p>
+        <p style="margin-left: 100px;">From <span id="startDate"></span> to <span id="endDate"></span> </p>
+        <p>We appreciate his/her work for contribution. </p>
+      </div>
+   <div id="nic">
+     <p><span id="orgi"></span></p>
+     <hr style=" width:18%; margin-left:0px; border: 1px solid black; ">
+     <p>Program Manager</p>
+   </div>
+   <hr style="  border: 2px solid black; margin-top: 20px; margin-bottom: 20px; ">
+   </div>
+   <script src="script.js"></script>
+</body>
+  
+</html>
